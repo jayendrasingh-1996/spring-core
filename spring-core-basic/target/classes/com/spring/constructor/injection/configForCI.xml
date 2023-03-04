@@ -46,7 +46,15 @@
 			<value type="int">1254</value>
 		</constructor-arg>
 
+		<constructor-arg> 
+		
+			<list>
+			<value>7456686544</value>
+			<value>8654324432</value>
 
+			</list>
+		</constructor-arg>
+	
 		<constructor-arg ref="addresRef"/>
 
 	</bean>
