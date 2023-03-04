@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ https://www.springframework.org/schema/context
+ https://www.springframework.org/schema/context/spring-context.xsd
+">
+
+
+	<bean class="com.spring.refrence.Address"
+		name="addressRefForEmployee">
+
+		<property name="street" value="bhopal naka" />
+		<property name="city" value="sehore" />
+		<property name="state" value="m.p." />
+		<property name="pincode" value="466115" />
+
+
+	</bean>
+
+	<bean class="com.spring.refrence.Address"
+		name="officeAddRefFor1stEmployment">
+
+		<property name="street" value="chennai" />
+		<property name="city" value="navallur" />
+		<property name="state" value="T.N" />
+		<property name="pincode" value="664118" />
+
+
+	</bean>
+
+
+
+
+
+
+	<bean class="com.spring.refrence.PastEmployment"
+		name="employmentHistoryRef1stEmployeement">
+
+		<property name="companyName" value="Virtusa" />
+		<property name="salary" value="700000" />
+
+		<property name="address" ref="officeAddRefFor1stEmployment">
+
+
+		</property>
+
+
+	</bean>
+
+
+	<bean class="com.spring.refrence.Address"
+		name="officeAddRefFor2ndEmployment">
+
+		<property name="street" value="Vijay Nagar" />
+		<property name="city" value="Indore" />
+		<property name="state" value="M.P" />
+		<property name="pincode" value="360021" />
+
+
+	</bean>
+
+
+
+
+
+	<bean class="com.spring.refrence.PastEmployment"
+		name="employmentHistoryRef2ndEmployment">
+
+		<property name="companyName" value="Nagaroo" />
+		<property name="salary" value="1400000" />
+
+		<property name="address" ref="officeAddRefFor2ndEmployment">
+
+
+		</property>
+
+
+	</bean>
+
+
+	<bean name="employee1" class="com.spring.refrence.Employee">
+
+		<property name="name" value="Ravi" />
+		<property name="employmentHistory">
+
+			<list>
+				<ref bean="employmentHistoryRef1stEmployeement" />
+
+				<ref bean="employmentHistoryRef2ndEmployment" />
+
+			</list>
+
+
+
+		</property>
+
+		<property name="address">
+			<ref bean="addressRefForEmployee" />
+		</property>
+
+
+	</bean>
+
+
+</beans>

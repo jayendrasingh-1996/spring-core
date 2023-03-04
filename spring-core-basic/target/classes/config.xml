@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ https://www.springframework.org/schema/context
+ https://www.springframework.org/schema/context/spring-context.xsd
+">
+
+
+
+	<!-- this is first bean -->
+	<!-- using value as a tag -->
+	<bean class="com.spring.pojo.Student" name="student1">
+		<property name="studentId">
+			<value>101</value>
+		</property>
+		<property name="studentName">
+			<value>Jay</value>
+		</property>
+
+		<property name="studentAddress">
+			<value>Ashta</value>
+		</property>
+
+
+	</bean>
+
+
+	<!-- this is second bean -->
+	<!-- using value as a attribute -->
+	<bean class="com.spring.pojo.Student" name="student2">
+		<property name="studentId" value="102" />
+
+
+		<property name="studentName" value="Ajay" />
+
+
+
+		<property name="studentAddress" value="Ashta" />
+
+
+
+
+	</bean>
+
+
+
+	<!-- third way to declare bean using p schema -->
+
+	<bean class="com.spring.pojo.Student" name="student3"  p:studentId="103"
+	p:studentName="Ravi" p:studentAddress="bhopal"></bean>
+
+
+
+
+
+</beans>
