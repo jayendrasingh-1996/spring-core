@@ -21,7 +21,7 @@
 	<context:annotation-config />
 
 	<bean class="com.spring.autowire.usingAnnotations.Address"
-		name="address1">
+		name="address">
 
 		<property name="street" value="bhopal naka" />
 		<property name="city" value="sehore" />
@@ -29,6 +29,17 @@
 		<property name="pincode" value="466115" />
 
 	</bean>
+
+	<bean class="com.spring.autowire.usingAnnotations.Address"
+		name="address1">
+
+		<property name="street" value="indore naka" />
+		<property name="city" value="asjta" />
+		<property name="state" value="m.p." />
+		<property name="pincode" value="466116" />
+
+	</bean>
+
 
 
 	<bean class="com.spring.autowire.usingAnnotations.Student"
