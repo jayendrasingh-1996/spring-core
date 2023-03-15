@@ -7,6 +7,8 @@ public class Address {
 	private String state;
 	private String pincode;
 
+	
+	
 	public String getStreet() {
 		return street;
 	}
